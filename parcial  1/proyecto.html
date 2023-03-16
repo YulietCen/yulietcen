@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, papel, tijeras, lagarto, spock</title>
+    <style>
+        body{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+   <script>
+       var setsGanadosJugador = 0;
+       var setsGanadosMaquina = 0;
+
+       var setsAJugar = parseInt(prompt ("Ingresa la cantidad de sets que quieres jugar"));
+
+       for (var i = 0; i < setsAJugar; i++ ) {
+           document.write("Set #" + (i + 1) + " a jugar...<br>")
+           var puntuaciónJugador = 0 
+           var puntuaciónMaquina = 0
+           alert("Comenzamos")
+           for (var j = 0; j < 3; j++ ) {
+               var manoDelJugador = prompt("Escribe 1. Piedra 2. Papel 3. Tijeras 4. Lagarto 5. Spock")
+               var manoDelCPU = Math.floor (Math.random() * 5) + 1;
+               
+            document.write(manoDelJugador + " - " + manoDelCPU + "<br>");
+            if(manoDelCPU == 1 && manoDelJugador == 2){
+                alert("Ganaste")
+                puntuaciónJugador ++
+            } else {
+                if(manoDelCPU == 1 && manoDelJugador == 3){
+                    alert("Perdiste")
+                    puntuaciónMaquina++
+                } else {
+                    if(manoDelCPU == 1 && manoDelJugador == 1){
+                        alert("Empataron")
+                    } else {
+                        if(manoDelCPU == 1 && manoDelJugador == 4){
+                        alert("Perdiste")
+                        puntuaciónMaquina++
+                    } else {
+                        if(manoDelCPU == 1 && manoDelJugador == 5){
+                            alert("Ganaste")
+                            puntuaciónJugador++
+                        }
+                    }
+                }
+            }
+            if(manoDelCPU == 2 && manoDelJugador == 2){
+                alert("Empate")
+            } else {
+                if(manoDelCPU == 2 && manoDelJugador == 3){
+                    alert("Ganaste")
+                    puntuaciónJugador++
+                } else {
+                    if(manoDelCPU == 2 && manoDelJugador == 1){
+                        alert("Perdiste")
+                        puntuaciónMaquina++
+                    } else {
+                        if(manoDelCPU == 2 && manoDelJugador == 4){
+                        alert("Perdiste")
+                        puntuaciónMaquina++
+                    } else {
+                        if(manoDelCPU == 2 && manoDelJugador == 5){
+                            alert("Ganaste")
+                            puntuaciónJugador++
+                        }
+                    }
+                }
+            }
+            if(manoDelCPU == 3 && manoDelJugador == 2){
+                alert("Ganaste")
+                puntuaciónJugador ++
+            } else {
+                if(manoDelCPU == 3 && manoDelJugador == 3){
+                    alert("Empate")
+                } else {
+                    if(manoDelCPU == 3 && manoDelJugador == 1){
+                        alert("Ganaste")
+                        puntuaciónJugador++
+                    } else {
+                        if(manoDelCPU == 3 && manoDelJugador == 4){
+                        alert("Perdiste")
+                        puntuaciónMaquina++
+                    } else {
+                        if(manoDelCPU == 3 && manoDelJugador == 5){
+                            alert("Ganaste")
+                            puntuaciónJugador++
+                        }
+                    }
+                }
+            }
+            if(manoDelCPU == 4 && manoDelJugador == 2){
+                alert("Perdiste")
+                puntuaciónMaquina ++
+            } else {
+                if(manoDelCPU == 4 && manoDelJugador == 3){
+                    alert("Ganaste")
+                    puntuaciónJugador++
+                } else {
+                    if(manoDelCPU == 4 && manoDelJugador == 1){
+                        alert("Ganaste")
+                        puntuaciónJugador++
+                    } else {
+                        if(manoDelCPU == 4 && manoDelJugador == 4){
+                        alert("Empate")
+                    } else {
+                        if(manoDelCPU == 4 && manoDelJugador == 5){
+                            alert("Perdiste")
+                            puntuaciónMaquina++
+                        }
+                    }
+                }
+            }
+            if(manoDelCPU == 5 && manoDelJugador == 2){
+                alert("Ganaste")
+                puntuaciónJugador ++
+            } else {
+                if(manoDelCPU == 5 && manoDelJugador == 3){
+                    alert("Perdiste")
+                    puntuaciónMaquina++
+                } else {
+                    if(manoDelCPU == 5 && manoDelJugador == 1){
+                        alert("Perdiste")
+                        puntuaciónMaquina++
+                    } else {
+                        if(manoDelCPU == 5 && manoDelJugador == 4){
+                        alert("Ganaste")
+                        puntuaciónJugador++
+                    } else {
+                        if(manoDelCPU == 5 && manoDelJugador == 5){
+                            alert("Empataste")
+                        }
+                    }
+                }
+            }
+       document.write("<br>")
+       alert("Puntuación del Usuario:" + puntuaciónJugador + "\n" + "Puntuación de la Maquina" + puntuaciónMaquina)
+       if(puntuaciónJugador > puntuaciónMaquina){
+           alert("Ganaste el round")
+           setsGanadosJugador++
+       }else{
+           alert("Perdiste el round")
+           setsGanadosMaquina++
+       }
+     }
+     if(setsGanadosJugador > setsGanadosMaquina){
+         alert("Ganaste el juego")
+     } else {
+         alert("Perdiste el juego")
+     }
+    }
+}
+            }
+        }
+    }
+}
+   </script>
+</body>
+</html>

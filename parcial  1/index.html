@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera página con JavaScript</title>
+</head>
+<body>
+    <script>
+        /*Este es un progrma que muestra en pantalla
+         La hora en formato de 12 horas.*/
+        var hora = new Date();
+        var horas = hora.getHours();
+
+        if (horas < 12) {
+            formatoHora = 'am';
+        } else {
+            formatoHora = 'pm'
+        }
+        horas = horas % 12;
+        if (horas == 0) {
+            horas = 12;
+        }
+        var min = hora.getMinutes();
+        if (min < 10) {
+            min = '0' + min;
+        }
+        var seg = hora.getSeconds();
+        if(seg < 10) {
+            seg = '0' + seg;
+        }
+        document.write ("hora actual; " + horas + ":" + min + ":" + seg + " " + formatoHora )
+    </script>
+</body>
+</html>
