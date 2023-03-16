@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea</title>
+</head>
+<body>
+    <script>
+        document.write('Hola mundo');
+
+        var aleatorio = Math.floor (Math.random() * 10);
+        document.write(aleatorio);
+
+        var booleano = false;
+        var unnumero = 8;
+        var unnumeroPuntoFlotante = 9.81;
+        var unaCadenaDeTexto = 'Prueba';
+
+        document.write(unnumero)
+        document.write("<br>")
+        document.write(unnumeroPuntoFlotante)
+        document.write("<br>")
+        document.write(unaCadenaDeTexto)
+        document.write("<br>")
+
+        if (booleano === false){
+            document.write('Prueba');
+        }
+
+        var persona = {
+            nombre : "pepito",
+            apellido : "conejo",
+            edad : "14",
+            mostrar : function() {
+                document.write("<br> hola, soy " + this.nombre + " " + this.apellido + " y tengo" + this.edad + "<br>");
+            }
+        }
+
+        persona.mostrar();
+
+        var caso1 = 0;
+        var caso2 = 5;
+        caso1 = caso2 = 100;
+
+        caso1 += 200;
+        caso1 -= 150;
+        caso1 *= 4;
+        caso1 /= 2;
+
+        document.write("<br>"+ caso1 + "<br>");
+
+        document.write("<br>");
+        document.write(1 <= 1)
+        document.write("<br>");
+
+        document.write(1 == "5")
+        document.write("<br>");
+
+        document.write(null == undefined)
+        document.write("<br>");
+
+        document.write(2 == false)
+        document.write("<br>");
+
+        document.write("" == false)
+        document.write("<br>");
+
+        document.write("\n" == true)
+        document.write("<br>");
+
+        document.write("" == 3)
+        document.write("<br>");
+
+        document.write("\n" == 4)
+
+        document.write("<br>");
+        var edad = 90;
+        var dinero = 6000;
+
+       var puedeaperturarcuenta = !(edad >= 18 && dinero >= 1000);
+       document.write ("Aperturar cuenta:" + puedeaperturarcuenta);
+
+       var suma = 4+2;
+       var resta= 4-2;
+       var producto = 4*2;
+       var division = 4/2;
+       var modulo = 5%2;
+
+       document.write("<br> suma"+ suma + "<br>");
+       document.write("resta"+ resta + "<br>");
+       document.write("producto"+ producto + "<br>");
+       document.write("division"+ division + "<br>");
+       document.write("modulo"+ modulo + "<br>");
+
+       var almacen = 15;
+       document.write("<br>" + almacen++);
+       document.write("<br>" + almacen);
+
+       document.write("<br>");
+
+       var numeroentexto = parseInt ("3.1416");
+       numeroentexto = numeroentexto + 10;
+       document.write(numeroentexto);
+
+       document.write("<br>");
+
+       var textomuestra = "\u00A9 probando..."
+       document.write(textomuestra);
+
+       document.write('\\');
+
+       document.write("<br>");
+
+        var textomuestra = "\u00BE probando..."
+        document.write(textomuestra);
+        document.write('\\');
+
+        document.write("<br>");
+        var textomuestra = "Esto es \u00BA otra prueba..."
+        alert(textomuestra);
+
+        document.write('\\');
+        document.write("<br>");
+
+        var textomuestra = " \&#10026; probando..."
+        document.write(textomuestra);
+    </script>
+    
+</body>
+</html>
